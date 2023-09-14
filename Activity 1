@@ -1,0 +1,105 @@
+#Q1
+print("Welcome to python")
+
+#Q2
+print("Name: Kishore Kanna G")
+print("Working place: Student at Vit, Vellore")
+
+#Q3
+#We can write a single-line comment by adding a single "#" character before any statement or line of code.
+
+#Q4
+print("Age: 19")
+
+#Q5
+port=5000
+app='webserver'
+print(type(port))
+print(type(app))
+
+#Q6
+va=56
+vb=56.0
+print(type(va))
+print(type(vb))
+va=str(va)
+vb=str(vb)
+print(type(va))
+print(type(vb))
+
+#Q7
+s='1005.23\n'
+print(float(s)*0.18)
+
+#Q8
+msg="Recieved a sum of Rs "
+cost=500.23
+print(msg+str(cost))
+
+#Q9
+S1="Server 1"
+S2="Server 2"
+S3="Server 3"
+print(S1+"\n"+S2+"\n"+S3)
+
+#Q10
+l = ['A','B','C']
+for i in range(3):
+  for j in range(3):
+    h=l[i]+str(j+1)
+    print(h,end=" ")
+print()
+#Q11
+#a.Yes
+#b.Yes
+#c.No
+#d.No
+
+#Q12
+#a
+#1st no printing
+#2nd "Text Book name is:pyhton programming"
+#b
+#Given message is: msg
+#c
+#City1
+#City2
+#City3  City4
+#City5
+#d
+#va value is:150
+#vb value is:569
+
+#Q13
+#a
+course = 'python'
+print(course)
+#b
+env='home'
+#c
+fname_Iname="Raj Paul"
+#d
+va="1"
+va=int(va)
+#e
+IP="10.20.30.40"
+#f
+Fname= "D:\\emp.xlsx"
+print("Given File name is:"+Fname)
+
+#Q14
+Student_name=input()
+sub1=int(input())
+sub2=int(input())
+sub3=int(input())
+sum=sub1+sub2+sub3
+avg=sum/3
+print("Name : {}\nSubject 1 : {}\nSubject 2 : {}\nSubject 3 : {}\nTotel : {}\nAverage : {}".format(Student_name,sub1,sub2,sub3,sum,avg))
+
+
+#Q15
+name=input("Headset name: ")
+price=input("Price: ")1
+print("My headset name is "+name)
+print(name+" cost is "+price+" Rs.")
+
