@@ -27,7 +27,69 @@ else:
 Fname='emp.csv'
 Fsize=14
 Futil=98.23
-print("File name:"+Fname+" Size:"+str(Fsize)+" Utilization :"+str(Futil))
+string = "File name:"+Fname+" Size:"+str(Fsize)+" Utilization :"+str(Futil)
+print(string)
 
+#II
+#1. yes
+#2. yes
+#3. no
+#4. yes
+#5. yes
 
+#III
+##1
+#P1=10
+#P2=20
+#P3=30
+
+#2
+#True
+
+#3
+#Yes
+
+#4
+#B
+
+#5
+#Yes
+
+#------
+#Q2
+First_name=input("Enter your first name: ")
+if(First_name):
+  Last_name=input("Hello {} enter your last name: ".format(First_name))
+  if(Last_name):
+    print("Hello {}{} Welcome to python programming".format(First_name,Last_name))
+  else:
+    print("Enter a valid inputK")
+else:
+  print("Enter a valid input")
+
+#Q3
+product=input("Enter a product name: ")
+code=input("Enter a {} code: ".format(product))
+cost=input("Enter a {} cost: ".format(product))
+print("""Product name {}
+----------
+Product code {}
+----------
+Product cost {}
+
+""".format(product,code,cost))
+
+#Q4
+cost=int(input("Enter the product cost: "))
+if(cost>1000):
+  tax=0.18*cost
+  toteltax=1.18*cost
+else:
+  tax=0.12*cost
+  toteltax=1.12*cost
+
+print("""Cost of product {}
+taxable amount {}
+totel including tax {}
+""".format(cost,tax,toteltax))
 
