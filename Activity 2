@@ -1,0 +1,33 @@
+#Q1
+cost='456.78'
+print(type(cost))
+cost=int(float(cost))
+print(type(cost))
+
+#Q2
+product_name="Px"
+Pcost='3462.32'
+print(int(0.18*float(Pcost)))
+
+#Q3
+Eqn_no=560
+if(Eqn_no>500):
+  print("above 500")
+else:
+  print("less than 500")
+
+#Q4
+Login="root"
+if(Login=="root"):
+  print("Login is correct")
+else:
+  print("Login is incorrect")
+
+#Q5
+Fname='emp.csv'
+Fsize=14
+Futil=98.23
+print("File name:"+Fname+" Size:"+str(Fsize)+" Utilization :"+str(Futil))
+
+
+
