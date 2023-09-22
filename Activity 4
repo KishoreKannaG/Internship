@@ -1,0 +1,133 @@
+#Q1
+'''
+Predict the output of below code
+def f1():
+print("Hello")
+if(f1() == None):
+print("Yes")
+else:
+print("No")
+a. Hello
+b. Hello
+Yes
+c. Hello
+No
+d. Type Error
+'''
+#ans: b
+
+#Q2
+'''
+def f1():
+port=5690
+f1()
+print(port)
+a. 5690
+b. None
+c. NameError
+'''
+#ans: c
+
+#Q3
+'''
+def f1():
+return 1,0
+print(type(f1()))
+a. <class ‘int’>
+b. <class ‘tuple’>
+c. <class ‘list’>
+d. <class ‘set’>
+'''
+#ans: b
+
+#Q4
+'''
+def f1(*a,**b):
+print(type(a),type(b))
+f1()
+a. <class ‘tuple’>
+b. <class ‘tuple’> <class ‘dict’>
+c. <class ‘dict’>
+'''
+#ans: b
+
+#Q5
+'''
+def fx():
+return 1
+return 2.3
+return 'data'
+return True
+print(fx())
+a. 1
+b. 2.3
+c. ‘data’
+d. True
+'''
+#ans: a
+
+#Q6
+'''
+def fx(a,b=0,*c,**d,e=None):
+print(“Hello”)
+fx(10)
+'''
+#corrected code
+def fx(a,b=0,*c,e=None,**d):
+  print("Hello")
+fx(10)
+
+#Q7
+'''
+def fx(*a):
+print(a)
+fx(db=’sqlite3’,usr=’root’,IP=’10.20.30.40’)
+'''
+#corrected code
+def fx(*a):
+  print(a)
+fx('db','sqlite3','usr','root','IP','10.20.30.40')
+
+#Q8
+'''
+def fy():
+app=’test-1’
+return App
+print(fy())
+'''
+#corrected code
+def fy():
+  app='test-1'
+  return app
+
+print(fy())
+
+#Q9
+'''
+Fname=”p1.log”
+def fx():
+print(Fname)
+Fname=”p2.log”
+print(Fname)
+fx()
+print(Fname)
+'''
+#corrected code
+Fname='p1.log'
+def fx():
+  Fname='p2.log'
+  print(Fname)
+fx()
+print(Fname)
+
+#Q10
+'''
+def fdisplay():
+print(“Hello”)
+display()
+'''
+#corrected code
+def fdisplay():
+  print("Hello")
+fdisplay()
+
