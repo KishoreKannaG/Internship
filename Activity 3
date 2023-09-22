@@ -1,0 +1,143 @@
+#Q1
+#Create an empty dictionary, display size & it’s type.
+
+dictt={} #creating a empty dictionary
+print(type(dictt)) #printing the variable type
+print(len(dictt)) #lenght of the variable
+
+#Q2
+'''
+Given DBI={'db1':'sql','db2':'sqlite','db3':'mysql'}.
+a. Display 'db2' value
+b. Replace mysql with pl/sql
+c. Display list of keys from DBI
+'''
+dbi = {'db1':'sql','db2':'sqlite','db3':'mysql',} #declaring the dictionary
+print(dbi['db2']) #printing the value of key 'db2'
+dbi['db3']='pl/sql' #changing the value of key 'db3'
+print(dbi['db3']) #printing the value of key 'db3'
+print("Keys: ")
+for i in dbi:     #printing the keys in the dictionary 'dbi'
+  print(i,end=" ")
+print()
+
+#Q3
+'''
+Given
+net_info={‘interface’:’eth0’,’type’:’ethernet’}
+a. How to test key interface is existing or not
+b. If key interface is exists – update interface type as eth1
+c. Display updated net_info dictionary
+'''
+net_info={'interface':'eth0','type':'ethernet'}
+check=0
+for i in net_info:
+  if(i=='interface'):
+    print('interface keyword exists') #prints if interface keyword exists
+    net_info["interface"]='eth1' #updates interface values as eth1
+    check=1   #helps to check if interface keyword exists check value remains as 0
+
+if(check==0):
+  print('interface keyword dosen\'t exist') #prints if interface keyword dosn't exist
+
+#Q4
+'''
+Write a python program
+Given list structure
+Emp = [ "e123,ram,sales,pune,1000",
+"e132,kumar,prod,bglore,3423",
+"e456,arun,prod,chennai,2456",
+"e544,vijay,hr,mumbai,6500" ]
+a. create an empty dictionary and name it as Emp
+b. convert the above given list into dict format.
+c. display list of key,value pairs from EMP dict
+Note:- employee id as a key, emp name as value
+'''
+Emp = [ "e123,ram,sales,pune,1000","e132,kumar,prod,bglore,3423","e456,arun,prod,chennai,2456","e544,vijay,hr,mumbai,6500" ]
+
+
+
+#Q5
+'''
+Given dictionary
+conf={"f1":"/etc/passwd","f2":"/etc/group",
+"f3": "/etc/sysconfig","f4":None
+}
+a. Determine the size of conf dictionary
+b. Add new configuration file (/etc/pam.d)
+c. Using keys() and get() display key,value details
+'''
+conf={"f1":"/etc/passwd","f2":"/etc/group","f3": "/etc/sysconfig","f4":None}
+print(len(conf))  #getting the length of conf
+conf["f5"]="/etc/pam.d" #adding new key
+print(conf.keys()) #printing all keys
+print(conf.get("f5")) #printing the specific key value
+
+
+#Q6
+'''
+Given dict structure
+Proc={'pid':12,'fs':'/proc','user':'root','sh':'/bin/bash'}
+using pop() - delete 'fs' and 'sh' key entries
+using del() - delete 'pid' and 'user' entries
+# what's the difference between pop() and del()
+using popitem() - delete Proc structure
+'''
+Proc={'pid':12,'fs':'/proc','user':'root','sh':'/bin/bash'}
+Proc.pop('fs')
+Proc.pop('sh')
+del(Proc['pid'])
+del(Proc['user'])
+#pop() returns the removed value, while delete() does not return anything.
+
+#Q7
+'''
+Write a python program:
+Step 1: create a new file host.py
+Step 2 : create an empty dict
+Step 3 : use looping statements – 5times
+i) Read a hostname from <STDIN>
+ii) Read a IP-Address from <STDIN>
+iii) Add a input details to existing dict
+iv) with hostname as a key and IP address as it’s value
+Step 4 : display Key/ value details to monitor
+'''
+
+#Q8
+'''
+Step 1: read a hostname from <STDIN>
+Step 2: Use membership operator to test whether the input
+hostname already exists or not.
+Step 3: if it’s exists already, display pop up message “Sorry your input hostname is exists”.
+'''
+
+#Q9
+'''
+a)
+car = { "brand":
+"Ford" "model":
+"Mustang"
+"year": 1964
+}
+b) fs={"ftype":"ext4","proto":"tcp/ip","port":80}
+print(fs["ext4"])
+c) d={True:1,[]:”list”}
+'''
+#a
+car = { "brand":"Ford","model":"Mustang","year": 1964} #colon was missing
+#b
+fs={"ftype":"ext4","proto":"tcp/ip","port":80}
+print(fs["ftype"])  #we can only use key to call in a dictionary
+#c
+d={True:1,list:"list"} #we cannot use [] as key
+
+#Q10
+'''
+Open a python shell
+A={“p1.c”,”p2.c”,”p3.java”,”Demo”}
+B={“p1.java”,”p1.c”,”p3.java”,”p2.c”,”Demo”,”D1”}
+a. Filter common files from the above two sets
+b. Combine both sets into single set and omit duplicate elements.
+c. type cast to list
+'''
+
