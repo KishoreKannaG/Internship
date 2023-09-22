@@ -1,0 +1,34 @@
+#Q1
+'''
+Step 1: create a file name p1.py
+Step 2: declare & initialize the pin number (ex: pin=1234)
+Step 3: Use while loop to iterate following statement thrice
+(i) Read a pin number from <STDIN>
+(ii) Compare a input pin with existing pin number
+(iii) If both pin numbers are matched, display pin number is matched at count
+time & exit from loop.
+(iv) If all 3 attempts fails, display message “your pin is blocked.”
+'''
+file1 = open("p1.py", "r")
+pin_value = file1.read()
+print(pin_value)
+for i in range(3):
+  pin=input()
+  if(str(pin)==pin_value):
+    print("Entered values is wrong!")
+    print("{} try left ".format(3-i))
+  else:
+    print("Entered pin is correct")
+file1.close()
+
+#Q2
+'''
+Modify the above program (p1.py) and save it as p2.py
+Step 1: create an empty list
+Step 2: append the user input to the list
+Step 3: once the user is done with all three attempts, give the user
+choice to view the inputs entered from list.
+'''
+
+
+
