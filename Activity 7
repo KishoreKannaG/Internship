@@ -1,0 +1,144 @@
+#Q1
+'''
+LB='1.23'
+if(LB >0.02):
+print('High-LB')
+else:
+print('Low-LB')
+'''
+#we cannot compare str and int
+
+#Q2
+'''
+def fx(Va):
+if(not Va):
+try:
+pass
+except Exception as eobj:
+print('OK-1')
+else:
+print('OK-2')
+finally:
+print('OK-3')
+# fx() -- (A)
+# fx(1) -- (B)
+# predict the output of fx() and fx(1)
+# How to display OK-1,OK-3 and OK-2,OK-3
+'''
+#1. no argument passed
+#2. OK-2
+#for 'OK-3' pass fx(0)
+#for 'OK-2' pass fx(1)
+
+#Q3
+'''
+list(map(lambda a:a.readlines()[-1],open("D:\\emp.csv")))
+'''
+
+
+#Q4
+'''
+L=[]
+if type(L) is str:
+L.append('D1')
+elif type(L) is list:
+L.append('D1')
+if not l:
+print("Empty")
+else:
+print("Not-Empty")
+print(L)
+'''
+#OK-3
+#Not-Empty
+#['D1']
+
+#Q5
+'''
+def Main():
+print('OK-1')
+print('OK-2')
+print('OK-3')
+print(OK)
+print('OK-4')
+print('OK-5')
+Main()
+# display OK-4 and OK-5
+'''
+#remove "print(OK)"
+
+#Q6
+'''
+s='[1,2,3]'
+s.append('4')
+print(s)
+'''
+#remove the qoute in variable s to convert str int list
+
+#Q7
+'''
+d={}
+d.setdefault('K1','V1','V3')
+print(d)
+'''
+#it requies 2 argument so remove 'V3'
+
+#Q8
+'''
+L= ['F:\\f1.log','F:\\f2.log','F:\\f3.log','F:\\f4.log','F:\\f1.log']
+len(set(list(set(L)).append('F:\\f2.log')))
+'''
+#NoneType object is not iterable
+
+#Q9
+'''
+import os
+def main():
+os.environ.setdefault(V='DJANGO_SETTINGS_MODULE', 'gstbilling.settings')
+try:
+from django.core.management import execute_from_command_line
+except ImportError as exc:
+raise ImportError(
+"Couldn't import Django. Are you sure it's installed and "
+"available on your PYTHONPATH environment variable? Did you "
+"forget to activate a virtual environment?"
+) from exc
+execute_from_command_line(sys.argv)
+if __name__ == '__main__':
+main()
+'''
+
+#Q10
+'''
+def invoice_data_validator(invoice_data):
+# Validate Invoice Info ----------
+# invoice-number
+try:
+invoice_number = int(invoice_data['invoice-number'])
+except:
+print("Error: Incorrect Invoice Number")
+return "Error: Incorrect Invoice Number"
+# invoice date
+try:
+date_text = invoice_data['invoice-date']
+datetime.datetime.strptime(date_text, '%Y-%m-%d')
+except:
+print("Error: Incorrect Invoice Date")
+return "Error: Incorrect Invoice Date"
+# Validate Customer Data ---------
+# customer-name
+if len(Invoice_data['customer-name']) < 1 or len(invoice_data['customer-name']) > 200:
+print("Error: Incorrect Customer Name")
+return "Error: Incorrect Customer Name"
+Copyright © 2019, Krosum Labs. All rights reserved.
+if len(invoice_data['customer-address']) > 600:
+print("Error: Incorrect Customer Address")
+return "Error: Incorrect Customer Address"
+if len(invoice_data['customer-phone']) > 14:
+print("Error: Incorrect Customer Phone")
+return "Error: Incorrect Customer Phone"
+if len(invoice_data['customer-gst']) != 15 and len(invoice_data['customer-gst']) != 0:
+print("Error: Incorrect Customer GST")
+return "Error: Incorrect Customer GST"
+return None
+'''
