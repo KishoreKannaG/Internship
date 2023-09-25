@@ -1,0 +1,27 @@
+import csv
+import json
+
+#reading the csv file
+f=open("/content/sample_data/california_housing_test.csv","r") #opeing the csv file in read format in 'f' pointer
+csv_reader = csv.reader(f)  #reading the entries as list and stoing in 'csv_reader'
+
+'''
+#using a generator for printing the entries in the csv file
+for line in csv_reader:
+  print(line)
+'''
+
+'''
+#converting csv entries into json entries
+for line in csv_reader:
+  json.dumps(line)
+'''
+
+js = open("/content/my_project/file.json","w") #opening the json file in write format in 'js' variable
+
+for line in csv_reader:
+  json.dump(line,js)
+
+
+js.close()
+f.close()
