@@ -1,0 +1,18 @@
+import requests
+
+r = requests.get("https://www.google.com")
+r.status_code  #if code is 200 then it is connected successfully
+
+
+r.headers  #gets all header 
+r.headers['Content-Type']  #gets the header named "Content-Type"
+print(type(r))
+gpage_value = r.text
+print(type(gpage_value),len(gpage_value))
+
+with open("/content/my_project/googlepage.html","w") as pp:   #opening a html file and writing the gpage_value
+  pp.write(gpage_value)
+
+r = requests.get("http://www.youtube.com")
+r.headers  #gets all header 
+r.headers['Content-Type']  #gets the header named "Content-Type"
