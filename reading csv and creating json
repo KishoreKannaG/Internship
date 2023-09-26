@@ -2,7 +2,7 @@ import csv
 import json
 
 #reading the csv file
-f=open("/content/sample_data/california_housing_test.csv","r") #opeing the csv file in read format in 'f' pointer
+f=open("/content/sample_data/california_housing_train.csv","r") #opeing the csv file in read format in 'f' pointer
 csv_reader = csv.reader(f)  #reading the entries as list and stoing in 'csv_reader'
 
 '''
@@ -16,12 +16,27 @@ for line in csv_reader:
 for line in csv_reader:
   json.dumps(line)
 '''
-
+json_dict={}
 js = open("/content/my_project/file.json","w") #opening the json file in write format in 'js' variable
-
+n=1
 for line in csv_reader:
-  json.dump(line,js)
+  key=n
+  n+=1
+  json_dict[key]=line
+  if(n>20):
+    break
 
-
-js.close()
+json.dump(json_dict,js)
 f.close()
+js.close()
+
+js = open("/content/my_project/file.json","r") #opening the json file in write format in 'js' variable
+with open("/content/my_project/jsonTOcsv.csv","w") as csv_reader:
+  csv_writer = csv.writer(csv_reader)
+  data = json.load(js)
+  print(type(data))
+  for i in range(1,21):
+    csv_writer.writerow(data[str(i)])
+
+csv_reader.close()
+js.close()
