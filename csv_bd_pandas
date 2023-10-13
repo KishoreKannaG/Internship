@@ -1,0 +1,25 @@
+import pandas as pd
+import csv
+import sqlite3
+
+dbh = sqlite3.connect("/content/kk/purchase.db")
+sth = dbh.cursor()
+obj = sth.execute("create table purchase(Administrative INT,Administrative_Duration INT,Informational INT,Informational_Duration INT,ProductRelated INT,ProductRelated_Duration FLOAT,BounceRates FLOAT,ExitRates FLOAT,PageValues FLOAT,SpecialDay FLOAT,Month TEXT,OperatingSystems INT,Browser INT,Region INT,TrafficType INT,VisitorType TEXT,Weekend TEXT,Revenue TEXT)")
+
+with open("/content/kk/online_shoppers_intention.csv","r") as file_data:
+  csvreader = csv.reader(file_data)
+  for i in csvreader:
+    sth.execute("insert into purchase values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",i)
+
+sth.execute('select *from purchase')
+'''
+for v in sth:
+  print(v)
+'''
+file_data.close()
+
+pd_file = pd.read_csv("/content/kk/online_shoppers_intention.csv")
+data = pd.DataFrame(pd_file)
+data.drop(['Administrative_Duration','Informational_Duration','ProductRelated_Duration','BounceRates','ExitRates','PageValues'], axis=1, inplace=True) 
+data.head(20)
+
