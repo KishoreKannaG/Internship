@@ -20,6 +20,7 @@ file_data.close()
 
 pd_file = pd.read_csv("/content/kk/online_shoppers_intention.csv")
 data = pd.DataFrame(pd_file)
-data.drop(['Administrative_Duration','Informational_Duration','ProductRelated_Duration','BounceRates','ExitRates','PageValues'], axis=1, inplace=True) 
+data.drop(['Administrative_Duration','Informational_Duration','ProductRelated_Duration','BounceRates','ExitRates','PageValues'], axis=1, inplace=True)
 data.head(20)
-
+data.info()
+data.describe()
