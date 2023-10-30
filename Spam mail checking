@@ -1,0 +1,28 @@
+import pandas as pd
+
+df = pd.read_csv("/content/drive/Othercomputers/Dell G15/book/spamdetection.csv")
+df.describe()
+
+
+lis=[]
+for i in df['type']:
+  if(i == "not spam"):
+    lis.append(0)
+  if(i == "spam"):
+    lis.append(1)
+df['output']=lis
+df.head()
+target = df['output']
+
+
+from sklearn.model_selection import train_test_split
+
+X_train,X_test,Y_train,Y_test = train_test_split(df,target,test_size=0.3)
+
+from sklearn.naive_bayes import GaussianNB
+model = GaussianNB()
+model.fit(X_train,Y_train)
+model.score(X_test,Y_test)
+
+model.predict(X_test[:4])
+
